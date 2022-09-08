@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Music-App</title>
 </head>
-<body>
+<body style="background-color:whitesmoke">
     <div class="main-div">
-        <div class="music-container">
-            <h2 id="title">LOTUS LANE</h2>
+        <div class="music-container" style="background-color: white;">
+            <marquee><h2 id="title" style="font-family:Georgia, 'Times New Roman', Times, serif;color:blueviolet">LOTUS LANE</h2></marquee>
             <h3 id="artist">The Loyalist</h3>
             <div class="img-container">
                 <img src="images/mahadev.jpg" width="250px" height="250px">
             </div>
             <div>
             <audio src="audio/Har-Har-Shambhu-Shiv-Mahadeva.mp3"  controls></audio>
+            </div>
+            <!-- progress bar -->
+            <div class="progressbar_container" id="progress_container">
+                <div class="progress_duration_meter">
+                    <div id="current_time">0:00</div>
+                    <div id="duration">0:00</div>
+                </div>
+                <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress"></div>
+                </div>
             </div>
             <!-- controls -->
 
@@ -30,6 +40,6 @@
     </div>
 
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
