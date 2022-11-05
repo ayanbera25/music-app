@@ -30,6 +30,7 @@ const artist=document.querySelector("#artist");
 let progress=document.querySelector("#progress");
 let current_time=document.querySelector("#current_time");
 let current_duration=document.querySelector("#duration");
+let progress_div=document.querySelector("#progress_div");
 // load song
 loadSongs=(song)=>{
     title.textContent= song.title;
@@ -108,6 +109,18 @@ music.addEventListener("timeupdate",(event)=>{
     if(currentTime)
     current_time.textContent=tot_currentTime;
 })
+
+// progress onclick functionality
+progress_div.addEventListener("click",(event)=>{
+    console.log(event); 
+    const {duration}=music;
+
+    let move_progress=(event.offsetX/progress_div.clientWidth)*duration;
+    console.log(move_progress);
+    music.currentTime=move_progress;
+})
+
+music.addEventListener("ended",nextSong);
 
 next.addEventListener("click",nextSong);
 prev.addEventListener("click",prevSong);
